@@ -10,7 +10,7 @@ class Player:
     down = False
     speed = 5
     diameter = 50
-    c = color(255,0,0)
+    c = color(255)
     
     # constructor
     def __init__(self, x, y, team):
