@@ -1,4 +1,14 @@
-class Enemy:
+from Sprite import Sprite
+from Bullet import Bullet
+
+import SpriteManager
+
+mark = 0
+wait = 1000
+go = True
+
+
+class Enemy(Sprite):
     
     speed = 8
     diameter = 50
@@ -14,10 +24,7 @@ class Enemy:
         if self.x < 0 or self.x > width:
             self.speed *= -1
         
-    def display(self):
-        fill(self.c)
-        ellipse(self.x, self.y, self.diameter, self.diameter)
-        
-    def animate(self):
-        self.move()
-        self.display()
+    def aim(self,target):
+        xComp = target.x - self.x
+        yComp = target.y - self.y
+        d = ((self.x - target.x))
