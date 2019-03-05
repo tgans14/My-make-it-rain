@@ -1,4 +1,5 @@
-class ScreenSaver:
+from Sprite import Sprite
+class ScreenSaver(Sprite):
     
     speedX = 8
     speedY = 4

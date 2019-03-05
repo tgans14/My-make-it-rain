@@ -1,4 +1,5 @@
-class Raindrop:
+from Sprite import Sprite
+class Raindrop(Sprite):
     
     speed = 8
     diameter = 50
@@ -19,6 +20,3 @@ class Raindrop:
         ellipse(self.x, self.y, self.diameter, self.diameter)
         if( self.y >= 525):
             self.y = 0
-    def animate(self):
-        self.move()
-        self.display()
